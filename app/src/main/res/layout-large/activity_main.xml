@@ -8,8 +8,8 @@
 
     <FrameLayout
         android:id="@+id/container1"
-        android:layout_width="253dp"
-        android:layout_height="559dp"
+        android:layout_width="188dp"
+        android:layout_height="548dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
@@ -22,8 +22,8 @@
 
     <FrameLayout
         android:id="@+id/container2"
-        android:layout_width="200dp"
-        android:layout_height="545dp"
+        android:layout_width="265dp"
+        android:layout_height="582dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"

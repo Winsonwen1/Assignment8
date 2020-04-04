@@ -3,6 +3,7 @@ package com.example.bookshelf;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements BookListFragment.
 
         }
 
-        if (ori == mConfiguration.ORIENTATION_LANDSCAPE) {
+        if (ori == mConfiguration.ORIENTATION_LANDSCAPE ||isPad(this)) {
             //Toast.makeText(this, "LAND", Toast.LENGTH_SHORT).show();
             twoPane = true;
 
@@ -249,6 +250,12 @@ public class MainActivity extends AppCompatActivity implements BookListFragment.
         this.index = index;
         getTestBooks(2, input);
 
+    }
+
+    public static boolean isPad(Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK)
+                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
     }
 
 
